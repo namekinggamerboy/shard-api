@@ -4,7 +4,7 @@ module.exports = {
 
   version: require("./package.json").version,
 
-  startshard(op){
+  start(op){
 
 const manager = new ShardingManager('./'+op.filename, {
     totalShards: op.totalshard||"auto",   
@@ -13,7 +13,7 @@ const manager = new ShardingManager('./'+op.filename, {
 
 manager.spawn();
 
-manager.on('shardCreate', (shard) => console.log(`Shard ${shard.id} launched`));
+manager.on('shardCreate', (shard) => console.log(`🎉 | Shard ${shard.id} launched`));
 
   }
 }
