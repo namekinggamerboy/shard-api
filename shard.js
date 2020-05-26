@@ -1,3 +1,4 @@
+if (process.version.slice(1).split('.')[0] < 12) return console.log('Node 12.0.0 or higher is required.');
 const { ShardingManager } = require('discord.js');
 
 module.exports = {
