@@ -1,6 +1,6 @@
 {
-  "name": "uplife-api-shard",
-  "version": "0.0.1",
+  "name": "shard-api",
+  "version": "0.0.2",
   "description": "uplife api shard hosting discord Bot",
   "main": "shard.js",
   "scripts": {
@@ -12,9 +12,6 @@
   "license": "ISC",
   "engines": {
     "node": ">=12.0.0"
-  },
-  "dependencies": {
-    "fs": "^0.0.2"
   },
   "devDependencies": {
     "eslint": "^7.0.0"
