@@ -7,8 +7,7 @@ module.exports = {
   startshard(op){
 
 const manager = new ShardingManager('./'+op.filename, {
-    totalShards: op.totalshard, 
-    
+    totalShards: op.totalshard||"auto",   
     token: op.token
 });
 
