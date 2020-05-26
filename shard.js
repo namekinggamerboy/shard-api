@@ -6,7 +6,7 @@ module.exports = {
 
   start(op){
 
-const manager = new ShardingManager('./'+op.filename, {
+const manager = new ShardingManager(op.filename, {
     totalShards: op.totalshard||"auto",   
     token: op.token
 });
