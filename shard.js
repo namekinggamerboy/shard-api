@@ -12,10 +12,14 @@ const manager = new ShardingManager(op.filename, {
     token: op.token
 });
 
-manager.spawn();
-
+if(op.spawn){
+manager.spawn(op.spawn);
 manager.on('shardCreate', (shard) => console.log(`🎉 | Shard ${shard.id} launched`));
+} else {
+
+manager.spawn();
+manager.on('shardCreate', (shard) => console.log(`🎉 | Shard ${shard.id} launched`));
+}
 
   }
-
 }
